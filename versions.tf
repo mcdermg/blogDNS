@@ -17,8 +17,6 @@ terraform {
 }
 
 provider "cloudflare" {
-  //api_token  = var.cloudflare_api_token
-  //account_id = var.cloudflare_account_id
   api_token  = data.sops_file.secrets.data["cloudflare_api_token"]
   account_id = data.sops_file.secrets.data["cloudflare_account_id"]
 }
