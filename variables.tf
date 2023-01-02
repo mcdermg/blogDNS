@@ -8,4 +8,3 @@ variable "maintenance" {
   description = "Whether to enable maintenance page via Cloudflare worker"
   default     = false
 }
-

@@ -18,6 +18,8 @@ terraform {
 
 provider "cloudflare" {
   api_token  = data.sops_file.secrets.data["cloudflare_api_token"]
+  # Will recieve a deprieciation warning on this but the resources in TF dont have the account_id presne yet
+  # To be added in v4.x of the provider. They added the warnings pre updateuing the provider for some reason
   account_id = data.sops_file.secrets.data["cloudflare_account_id"]
 }
 
